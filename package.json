@@ -1,0 +1,44 @@
+{
+  "name": "sabrim-mahmud-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "cv": "node scripts/build-cv.mts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "cv:weasyprint": "node scripts/build-cv.mts --html-only && python3 scripts/render-cv.py public",
+    "cv:private": "node scripts/build-cv.mts --html-only --private && python3 scripts/render-cv.py private"
+  },
+  "dependencies": {
+    "lucide-react": "^1.62.0",
+    "motion": "^14.7.1",
+    "next": "16.4.3",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@tailwindcss/turbopack": "^4",
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.8",
+    "@types/node": "^22.20.5",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^6.1.2",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.3",
+    "jsdom": "^30.1.3",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vite-tsconfig-paths": "^6.1.1",
+    "vitest": "^5.0.5"
+  },
+  "type": "module"
+}
